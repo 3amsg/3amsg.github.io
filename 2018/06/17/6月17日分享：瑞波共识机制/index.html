@@ -5,24 +5,32 @@
   
 
   
-  <title>6月17日分享：瑞波共识机制 | 3AM Singapore</title>
+  <title>6月17日分享：瑞波&amp;恒星共识机制 | 3AM Singapore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
+  <meta name="description" content="The Ripple Protocol Consensus Algorithm&amp;amp;Stellar Consensus Protocol 分享者：Michael Link to Ripple paper - by Ripple Labs Inc, 2014 Link to Stellar paper - by David Mazières, SDF 2015 瑞波共识算法 RPCA解决的三个问">
 <meta name="keywords" content="blockchain">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6月17日分享：瑞波共识机制">
+<meta property="og:title" content="6月17日分享：瑞波&amp;恒星共识机制">
 <meta property="og:url" content="http://3amsg.github.io/2018/06/17/6月17日分享：瑞波共识机制/index.html">
 <meta property="og:site_name" content="3AM Singapore">
-<meta property="og:description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
+<meta property="og:description" content="The Ripple Protocol Consensus Algorithm&amp;amp;Stellar Consensus Protocol 分享者：Michael Link to Ripple paper - by Ripple Labs Inc, 2014 Link to Stellar paper - by David Mazières, SDF 2015 瑞波共识算法 RPCA解决的三个问">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://3amsg.github.io/images/ripple%201.png">
 <meta property="og:image" content="http://3amsg.github.io/images/ripple%202.png">
 <meta property="og:image" content="http://3amsg.github.io/images/ripple%203.png">
 <meta property="og:image" content="http://3amsg.github.io/images/ripple%204.png">
-<meta property="og:updated_time" content="2018-06-24T10:08:48.116Z">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%201.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%202.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%203.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%204.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%205.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%206.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%207.png">
+<meta property="og:image" content="http://3amsg.github.io/images/stellar%208.png">
+<meta property="og:updated_time" content="2018-06-24T10:28:38.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6月17日分享：瑞波共识机制">
-<meta name="twitter:description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
+<meta name="twitter:title" content="6月17日分享：瑞波&amp;恒星共识机制">
+<meta name="twitter:description" content="The Ripple Protocol Consensus Algorithm&amp;amp;Stellar Consensus Protocol 分享者：Michael Link to Ripple paper - by Ripple Labs Inc, 2014 Link to Stellar paper - by David Mazières, SDF 2015 瑞波共识算法 RPCA解决的三个问">
 <meta name="twitter:image" content="http://3amsg.github.io/images/ripple%201.png">
   
     <link rel="alternate" href="/atom.xml" title="3AM Singapore" type="application/atom+xml">
@@ -88,7 +96,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      6月17日分享：瑞波共识机制
+      6月17日分享：瑞波&amp;恒星共识机制
     </h1>
   
 
@@ -96,9 +104,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>The Ripple Protocol Consensus Algorithm</p>
+        <p>The Ripple Protocol Consensus Algorithm<br>&amp;<br>Stellar Consensus Protocol</p>
 <p>分享者：Michael</p>
-<p><a href="https://ripple.com/files/ripple_consensus_whitepaper.pdf" target="_blank" rel="noopener">Link to the paper</a> - by Ripple Labs Inc, 2014</p>
+<p><a href="https://ripple.com/files/ripple_consensus_whitepaper.pdf" target="_blank" rel="noopener">Link to Ripple paper</a> - by Ripple Labs Inc, 2014</p>
+<p><a href="https://www.stellar.org/papers/stellar-consensus-protocol.pdf" target="_blank" rel="noopener">Link to Stellar paper</a> - by David Mazières, SDF 2015</p>
 <h1 id="瑞波共识算法-RPCA"><a href="#瑞波共识算法-RPCA" class="headerlink" title="瑞波共识算法 RPCA"></a>瑞波共识算法 RPCA</h1><p>解决的三个问题</p>
 <ol>
 <li>Correctness: 是否是有效的transaction。</li>
@@ -123,7 +132,7 @@
 </ol>
 <p><img src="/images/ripple 1.png" alt=""></p>
 <p>这个算法的BFT是抵御 &lt;20%的非正义节点。</p>
-<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="证明correctness"><a href="#证明correctness" class="headerlink" title="证明correctness"></a>证明correctness</h2><p>如果一个节点非正义的概率是Pc，那么</p>
+<h1 id="RPCA-证明"><a href="#RPCA-证明" class="headerlink" title="RPCA 证明"></a>RPCA 证明</h1><h2 id="证明correctness"><a href="#证明correctness" class="headerlink" title="证明correctness"></a>证明correctness</h2><p>如果一个节点非正义的概率是Pc，那么</p>
 <p><img src="/images/ripple 2.png" alt=""></p>
 <p>这个这个公式可视化之后，节点数和Pc之间的关系就是：</p>
 <p><img src="/images/ripple 3.png" alt=""></p>
@@ -133,6 +142,23 @@
 <p>看下面这两个 cliques（小帮派）的fork情况：</p>
 <p><img src="/images/ripple 4.png" alt=""></p>
 <h2 id="证明-utility"><a href="#证明-utility" class="headerlink" title="证明 utility"></a>证明 utility</h2><p>skip</p>
+<h1 id="恒星公式机制"><a href="#恒星公式机制" class="headerlink" title="恒星公式机制"></a>恒星公式机制</h1><p>Stellar Consensus Protocol 讲述了联邦拜占庭一致性（FBA）算法。我这里会粗略解释。</p>
+<p>FBA于传统Byzantine Agreement的区别在于，无需所有节点都被验证，因为FBA中，每个节点自己选择quoram节点对象。</p>
+<p><img src="/images/stellar 1.png" alt=""></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><img src="/images/stellar 2.png" alt=""></p>
+<p><img src="/images/stellar 3.png" alt=""></p>
+<p>Slice：Q（v）是一个node的slice。</p>
+<p>Quoram：法定体。能满足达成一致协议的节点集合。</p>
+<p><img src="/images/stellar 4.png" alt=""></p>
+<p><img src="/images/stellar 5.png" alt=""></p>
+<p><img src="/images/stellar 6.png" alt=""></p>
+<h2 id="Tiered-Quoram概念"><a href="#Tiered-Quoram概念" class="headerlink" title="Tiered Quoram概念"></a>Tiered Quoram概念</h2><p>Tiered Quoram就是分级的法定体。</p>
+<p><img src="/images/stellar 7.png" alt=""></p>
+<p>在top tier不止一个qouram。</p>
+<p>比如大商业银行是一个quoram，同时worker union和audit组织成为一个quoram。这样大大保证了top tier的可信度。</p>
+<p><img src="/images/stellar 8.png" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>联邦拜占庭一致性（FBA）无法挖矿，无验证奖励机制。高可用性，每5s出一个区块，同时耗费的算力极低。</p>
+<p>这个算法是为分布式交易所，跨货币资产转移而存在的。</p>
 
       
     </div>
@@ -194,7 +220,7 @@
       <ul>
         
           <li>
-            <a href="/2018/06/17/6月17日分享：瑞波共识机制/">6月17日分享：瑞波共识机制</a>
+            <a href="/2018/06/17/6月17日分享：瑞波共识机制/">6月17日分享：瑞波&amp;恒星共识机制</a>
           </li>
         
           <li>
