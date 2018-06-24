@@ -5,25 +5,20 @@
   
 
   
-  <title>6月17日分享：瑞波共识机制 | 3AM Singapore</title>
+  <title>6月17日分享：拜占庭将军问题 | 3AM Singapore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
+  <meta name="description" content="Byzantine Generals’ Problem 分享者：Michael Byzantine Generals’ Problem A group of generals, each commanding a portion of the Byzantine army, encircle a city. These generals wish to formulate a plan for a">
 <meta name="keywords" content="blockchain">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6月17日分享：瑞波共识机制">
-<meta property="og:url" content="http://3amsg.github.io/2018/06/17/6月17日分享：瑞波共识机制/index.html">
+<meta property="og:title" content="6月17日分享：拜占庭将军问题">
+<meta property="og:url" content="http://3amsg.github.io/2018/06/17/6月17日分享：拜占庭将军问题/index.html">
 <meta property="og:site_name" content="3AM Singapore">
-<meta property="og:description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
+<meta property="og:description" content="Byzantine Generals’ Problem 分享者：Michael Byzantine Generals’ Problem A group of generals, each commanding a portion of the Byzantine army, encircle a city. These generals wish to formulate a plan for a">
 <meta property="og:locale" content="Chinese">
-<meta property="og:image" content="http://3amsg.github.io/images/ripple%201.png">
-<meta property="og:image" content="http://3amsg.github.io/images/ripple%202.png">
-<meta property="og:image" content="http://3amsg.github.io/images/ripple%203.png">
-<meta property="og:image" content="http://3amsg.github.io/images/ripple%204.png">
-<meta property="og:updated_time" content="2018-06-24T10:08:48.116Z">
+<meta property="og:updated_time" content="2018-06-24T09:44:15.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6月17日分享：瑞波共识机制">
-<meta name="twitter:description" content="The Ripple Protocol Consensus Algorithm 分享者：Michael Link to the paper - by Ripple Labs Inc, 2014 瑞波共识算法 RPCA解决的三个问题  Correctness: 是否是有效的transaction。 Agreement: 统一的global truth，防止双花。 Utility: 高可用性，包括la">
-<meta name="twitter:image" content="http://3amsg.github.io/images/ripple%201.png">
+<meta name="twitter:title" content="6月17日分享：拜占庭将军问题">
+<meta name="twitter:description" content="Byzantine Generals’ Problem 分享者：Michael Byzantine Generals’ Problem A group of generals, each commanding a portion of the Byzantine army, encircle a city. These generals wish to formulate a plan for a">
   
     <link rel="alternate" href="/atom.xml" title="3AM Singapore" type="application/atom+xml">
   
@@ -74,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-6月17日分享：瑞波共识机制" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-6月17日分享：拜占庭将军问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/17/6月17日分享：瑞波共识机制/" class="article-date">
-  <time datetime="2018-06-17T12:48:41.000Z" itemprop="datePublished">2018-06-17</time>
+    <a href="/2018/06/17/6月17日分享：拜占庭将军问题/" class="article-date">
+  <time datetime="2018-06-17T12:48:40.000Z" itemprop="datePublished">2018-06-17</time>
 </a>
     
   </div>
@@ -88,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      6月17日分享：瑞波共识机制
+      6月17日分享：拜占庭将军问题
     </h1>
   
 
@@ -96,50 +91,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>The Ripple Protocol Consensus Algorithm</p>
+        <p>Byzantine Generals’ Problem</p>
 <p>分享者：Michael</p>
-<p><a href="https://ripple.com/files/ripple_consensus_whitepaper.pdf" target="_blank" rel="noopener">Link to the paper</a> - by Ripple Labs Inc, 2014</p>
-<h1 id="瑞波共识算法-RPCA"><a href="#瑞波共识算法-RPCA" class="headerlink" title="瑞波共识算法 RPCA"></a>瑞波共识算法 RPCA</h1><p>解决的三个问题</p>
+<h1 id="Byzantine-Generals’-Problem"><a href="#Byzantine-Generals’-Problem" class="headerlink" title="Byzantine Generals’ Problem"></a>Byzantine Generals’ Problem</h1><blockquote>
+<p><strong>A group of generals</strong>, each commanding a portion of the Byzantine army, encircle a city. These generals wish to formulate a plan for attacking the city. In its simplest form, the generals <strong>must decide only whether to attack or retreat</strong>. Some generals may prefer to attack, while others prefer to retreat. The important thing is that every general agree on a common decision, for a halfhearted attack by a few generals would become a rout, and would be worse than either a coordinated attack or a coordinated retreat. <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance#Byzantine_Generals&#39;_Problem" target="_blank" rel="noopener">Byzantine Generals’ Problem - WIKI</a></p>
+</blockquote>
+<p>简单讲，就是所有将军需要统一行动，不可以有人攻击，有人撤退。</p>
+<p>难点：</p>
 <ol>
-<li>Correctness: 是否是有效的transaction。</li>
-<li>Agreement: 统一的global truth，防止双花。</li>
-<li>Utility: 高可用性，包括latency，电力消耗，易接入性。</li>
+<li>General cast vote for suboptimal strategy</li>
+<li>General cast vote selectively</li>
+<li>The messenger may fail to deliver votes</li>
+<li>The messenger may forge false votes</li>
 </ol>
-<h2 id="构建步骤"><a href="#构建步骤" class="headerlink" title="构建步骤"></a>构建步骤</h2><ol>
-<li>每个server选一个UNL（unique node list）</li>
-<li>每个节点建立candidate set</li>
-<li>从UNL中，合并candidate set，并在本地进行验证。</li>
-<li>上一轮pass的transaction，发给UNL节点。</li>
-<li>拿到80% vote的transaction，放进最终的last-closed ledger中</li>
+<h1 id="Byzantine-fault-tolerance"><a href="#Byzantine-fault-tolerance" class="headerlink" title="Byzantine fault tolerance"></a>Byzantine fault tolerance</h1><blockquote>
+<p>Byzantine fault tolerance (BFT) is the dependability of a fault-tolerant computer system, particularly distributed computing systems, where components may fail and there is imperfect information on whether a component is failed. <a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance" target="_blank" rel="noopener">Byzantine fault tolerance - WIKI</a></p>
+</blockquote>
+<p>BFT “拜占庭容错” 是一个分布式计算领域的容错技术。</p>
+<p>提出者是2013年的图灵讲得主Leslie Lamport。他证明了在消息不可靠信道上传递，达到一致性是不可能的。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><p>我们做以下假设：</p>
+<ol>
+<li>一致性：每个忠诚的将军必须收到相同的命令值vi（vi是第i个将军的命令）</li>
+<li>正确性：如果第i个将军是忠诚的，那么他发送的命令和每个忠诚将军收到的vi相同。</li>
 </ol>
-<h2 id="2个前提"><a href="#2个前提" class="headerlink" title="2个前提"></a>2个前提</h2><ol>
-<li>任何一个server都可以broadcast交易，但是只需要依赖UNL来做consensus</li>
-<li>验证结果是time-bound &amp; binary的。</li>
-</ol>
-<h2 id="达到共识的定义"><a href="#达到共识的定义" class="headerlink" title="达到共识的定义"></a>达到共识的定义</h2><ol>
-<li>所有正义节点都在finite时间内作出判决。</li>
-<li>所有正义节点达成的判决是一致的。</li>
-<li>最终的判决不论是0还是1，都是有效的共识。</li>
-</ol>
-<p><img src="/images/ripple 1.png" alt=""></p>
-<p>这个算法的BFT是抵御 &lt;20%的非正义节点。</p>
-<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="证明correctness"><a href="#证明correctness" class="headerlink" title="证明correctness"></a>证明correctness</h2><p>如果一个节点非正义的概率是Pc，那么</p>
-<p><img src="/images/ripple 2.png" alt=""></p>
-<p>这个这个公式可视化之后，节点数和Pc之间的关系就是：</p>
-<p><img src="/images/ripple 3.png" alt=""></p>
-<p>当Pc = 15% N = 200时，p* = 97.8%</p>
-<h2 id="证明-agreement"><a href="#证明-agreement" class="headerlink" title="证明 agreement"></a>证明 agreement</h2><p>系统存在fork的风险，也就是2个小系统，相互无法交换共识信息。</p>
-<p>当UNL的size &lt; 0.2*n时，fork是可能发生的。</p>
-<p>看下面这两个 cliques（小帮派）的fork情况：</p>
-<p><img src="/images/ripple 4.png" alt=""></p>
-<h2 id="证明-utility"><a href="#证明-utility" class="headerlink" title="证明 utility"></a>证明 utility</h2><p>skip</p>
+<p>当 n &gt; 3m 时，即叛徒的个数 m 小于将军总数的 n 的 1/3 时，假设通信可靠，可以构造同时满足“一致性”和“正确性”的解决方法.</p>
+<h2 id="PBFT"><a href="#PBFT" class="headerlink" title="PBFT"></a>PBFT</h2><p>BFT算法中最典型的是PBFT</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://3amsg.github.io/2018/06/17/6月17日分享：瑞波共识机制/" data-id="cjism6ync0000ie220pktxxk8" class="article-share-link">Share</a>
+      <a data-url="http://3amsg.github.io/2018/06/17/6月17日分享：拜占庭将军问题/" data-id="cjisnbity0003ie22jstvq0n6" class="article-share-link">Share</a>
       
-        <a href="http://3amsg.github.io/2018/06/17/6月17日分享：瑞波共识机制/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://3amsg.github.io/2018/06/17/6月17日分享：拜占庭将军问题/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -148,10 +131,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2018/06/17/6月17日分享：瑞波共识机制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          6月17日分享：瑞波共识机制
+        
+      </div>
+    </a>
   
-    <a href="/2018/06/17/6月17日分享：拜占庭将军问题/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/06/11/6月9日分享：跨链原子交换/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">6月17日分享：拜占庭将军问题</div>
+      <div class="article-nav-title">6月9日分享：跨链原子交换</div>
     </a>
   
 </nav>
@@ -260,7 +252,7 @@ s.setAttribute('data-timestamp', +new Date());
 <script>
   var disqus_shortname = '3amsg';
   
-  var disqus_url = 'http://3amsg.github.io/2018/06/17/6月17日分享：瑞波共识机制/';
+  var disqus_url = 'http://3amsg.github.io/2018/06/17/6月17日分享：拜占庭将军问题/';
   
   (function(){
     var dsq = document.createElement('script');

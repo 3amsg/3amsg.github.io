@@ -16,7 +16,7 @@
 <meta property="og:description" content="Cross chain atomic swap 分享者：李仕炜 定义 跨链：不同公链之间的token 原子：不可分割 交换：由智能合约来完成的交换。  原子交换基本的基本构成是：HTLC（Hashed Timelock Contracts）。它有两种类型  Hashlock：给你一个哈希值，当你给出它的原像时，你就可以花这笔钱 Timelock：在某个时间点之前，你不能花这笔钱。只有这个时间点之后">
 <meta property="og:locale" content="Chinese">
 <meta property="og:image" content="http://3amsg.github.io/images/atomic-swap-steps.png">
-<meta property="og:updated_time" content="2018-06-23T10:07:13.710Z">
+<meta property="og:updated_time" content="2018-06-24T09:13:11.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="6月9日分享：跨链原子交换">
 <meta name="twitter:description" content="Cross chain atomic swap 分享者：李仕炜 定义 跨链：不同公链之间的token 原子：不可分割 交换：由智能合约来完成的交换。  原子交换基本的基本构成是：HTLC（Hashed Timelock Contracts）。它有两种类型  Hashlock：给你一个哈希值，当你给出它的原像时，你就可以花这笔钱 Timelock：在某个时间点之前，你不能花这笔钱。只有这个时间点之后">
@@ -95,7 +95,7 @@
       
         <p>Cross chain atomic swap</p>
 <p>分享者：李仕炜</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><ul>
 <li>跨链：不同公链之间的token</li>
 <li>原子：不可分割</li>
 <li>交换：由智能合约来完成的交换。</li>
@@ -107,7 +107,7 @@
 </ol>
 <p>主要应用场景是雷点网络，闪电网络。商业应用场景目前还没有落地。</p>
 <p>实际今天的跨链交换，多数是手动实现的，原因是主流的中心化交易所已足够满足多数炒币需求。</p>
-<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>Alice和Bob的例子。假设Alice用0.1个比特币BTC换取Bob的2个以太坊ETH。</p>
+<h1 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h1><p>Alice和Bob的例子。假设Alice用0.1个比特币BTC换取Bob的2个以太坊ETH。</p>
 <pre><code>Alice跟Bob说：如果你知道我的密码x，那我手里的BTC就是你的。
 Alice同时还说：如果48小时内交易未完成，我将取回我的BTC。
 </code></pre><p>但是因为Bob无法猜出Alice的密码x，所以Bob这么做：</p>
@@ -118,24 +118,24 @@ Bob还说：如果24小时之内交易未完成，我将取回我的ETH。
 Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alice的BTC。
 跨链交换结束。
 </code></pre><p>每个transaction需要等上一个transaction完全上链之后，才能继续进行。</p>
-<h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><p><img src="/images/atomic-swap-steps.png" alt=""></p>
-<h3 id="transaction的gas-fee谁来pay？"><a href="#transaction的gas-fee谁来pay？" class="headerlink" title="transaction的gas fee谁来pay？"></a>transaction的gas fee谁来pay？</h3><p>Alice和Bob需要在各自的链上提交2个transaction，fee自己负责或商量决定。</p>
-<h3 id="不同链用不同Hash（）function怎么办？"><a href="#不同链用不同Hash（）function怎么办？" class="headerlink" title="不同链用不同Hash（）function怎么办？"></a>不同链用不同Hash（）function怎么办？</h3><p>需使用两个链都支持的哈希算法，如SHA-256。</p>
-<h3 id="有没有可能Alice拿到所有币？"><a href="#有没有可能Alice拿到所有币？" class="headerlink" title="有没有可能Alice拿到所有币？"></a>有没有可能Alice拿到所有币？</h3><p>有可能。</p>
+<h1 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h1><p><img src="/images/atomic-swap-steps.png" alt=""></p>
+<h2 id="transaction的gas-fee谁来pay？"><a href="#transaction的gas-fee谁来pay？" class="headerlink" title="transaction的gas fee谁来pay？"></a>transaction的gas fee谁来pay？</h2><p>Alice和Bob需要在各自的链上提交2个transaction，fee自己负责或商量决定。</p>
+<h2 id="不同链用不同Hash（）function怎么办？"><a href="#不同链用不同Hash（）function怎么办？" class="headerlink" title="不同链用不同Hash（）function怎么办？"></a>不同链用不同Hash（）function怎么办？</h2><p>需使用两个链都支持的哈希算法，如SHA-256。</p>
+<h2 id="有没有可能Alice拿到所有币？"><a href="#有没有可能Alice拿到所有币？" class="headerlink" title="有没有可能Alice拿到所有币？"></a>有没有可能Alice拿到所有币？</h2><p>有可能。</p>
 <p>假设alice在claim币之后，全球大断网，或者bob忘记去claim他应得的币，有可能alice拿到所有的币。</p>
-<h3 id="有没有可能Bob拿到所有币？"><a href="#有没有可能Bob拿到所有币？" class="headerlink" title="有没有可能Bob拿到所有币？"></a>有没有可能Bob拿到所有币？</h3><p>有可能。</p>
+<h2 id="有没有可能Bob拿到所有币？"><a href="#有没有可能Bob拿到所有币？" class="headerlink" title="有没有可能Bob拿到所有币？"></a>有没有可能Bob拿到所有币？</h2><p>有可能。</p>
 <p>Bob劫持Alice发出的claim以太坊的transaction，使其无法上链。并用这个transaction中的x值claim Alice的比特币。</p>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><h3 id="以太坊的智能合约支持timer吗？"><a href="#以太坊的智能合约支持timer吗？" class="headerlink" title="以太坊的智能合约支持timer吗？"></a>以太坊的智能合约支持timer吗？</h3><p>原生以太坊不支持。需要第三方来trigger一个transaction。</p>
+<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="以太坊的智能合约支持timer吗？"><a href="#以太坊的智能合约支持timer吗？" class="headerlink" title="以太坊的智能合约支持timer吗？"></a>以太坊的智能合约支持timer吗？</h2><p>原生以太坊不支持。需要第三方来trigger一个transaction。</p>
 <p>目前市面上有一些智能合约timer解决方案。</p>
-<h3 id="为什么Alice在1-amp-2之间，需要72小时才能拿到refund？"><a href="#为什么Alice在1-amp-2之间，需要72小时才能拿到refund？" class="headerlink" title="为什么Alice在1&amp;2之间，需要72小时才能拿到refund？"></a>为什么Alice在1&amp;2之间，需要72小时才能拿到refund？</h3><p>笔者也不太懂，明白的大佬请给我留言。</p>
+<h2 id="为什么Alice在1-amp-2之间，需要72小时才能拿到refund？"><a href="#为什么Alice在1-amp-2之间，需要72小时才能拿到refund？" class="headerlink" title="为什么Alice在1&amp;2之间，需要72小时才能拿到refund？"></a>为什么Alice在1&amp;2之间，需要72小时才能拿到refund？</h2><p>笔者也不太懂，明白的大佬请给我留言。</p>
 <p>（实际上，上述对于refund过程的描述不太准确）</p>
-<h3 id="跨链原子交换目前的应用场景？"><a href="#跨链原子交换目前的应用场景？" class="headerlink" title="跨链原子交换目前的应用场景？"></a>跨链原子交换目前的应用场景？</h3><p>支持闪电网络，雷电网络的multihop支付通道。</p>
+<h2 id="跨链原子交换目前的应用场景？"><a href="#跨链原子交换目前的应用场景？" class="headerlink" title="跨链原子交换目前的应用场景？"></a>跨链原子交换目前的应用场景？</h2><p>支持闪电网络，雷电网络的multihop支付通道。</p>
 <p>分布式交易所。</p>
-<h3 id="如果只依赖闪电网络是不是失去了区块链的可靠性？"><a href="#如果只依赖闪电网络是不是失去了区块链的可靠性？" class="headerlink" title="如果只依赖闪电网络是不是失去了区块链的可靠性？"></a>如果只依赖闪电网络是不是失去了区块链的可靠性？</h3><p>闪电网络是trustless的，智能合约比较容易实现。</p>
+<h2 id="如果只依赖闪电网络是不是失去了区块链的可靠性？"><a href="#如果只依赖闪电网络是不是失去了区块链的可靠性？" class="headerlink" title="如果只依赖闪电网络是不是失去了区块链的可靠性？"></a>如果只依赖闪电网络是不是失去了区块链的可靠性？</h2><p>闪电网络是trustless的，智能合约比较容易实现。</p>
 <p>而商业逻辑实际并不只局限于这些应用中。</p>
-<h3 id="今天跨链交换应用落地最大的门槛是什么？"><a href="#今天跨链交换应用落地最大的门槛是什么？" class="headerlink" title="今天跨链交换应用落地最大的门槛是什么？"></a>今天跨链交换应用落地最大的门槛是什么？</h3><p>商业逻辑和技术方案是分开的。</p>
+<h2 id="今天跨链交换应用落地最大的门槛是什么？"><a href="#今天跨链交换应用落地最大的门槛是什么？" class="headerlink" title="今天跨链交换应用落地最大的门槛是什么？"></a>今天跨链交换应用落地最大的门槛是什么？</h2><p>商业逻辑和技术方案是分开的。</p>
 <p>另外，跨链交易存在上述攻击风险。详情参见：<a href="https://zhuanlan.zhihu.com/p/31689532" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/31689532</a></p>
-<h3 id="介绍一下分布式交易所"><a href="#介绍一下分布式交易所" class="headerlink" title="介绍一下分布式交易所"></a>介绍一下分布式交易所</h3><p>可以了解一下：</p>
+<h2 id="介绍一下分布式交易所"><a href="#介绍一下分布式交易所" class="headerlink" title="介绍一下分布式交易所"></a>介绍一下分布式交易所</h2><p>可以了解一下：</p>
 <ol>
 <li>0x解决方案</li>
 <li>新加坡的kyber</li>
@@ -144,7 +144,7 @@ Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alic
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://3amsg.github.io/2018/06/11/6月9日分享：跨链原子交换/" data-id="cjislwcc90001ia225kioebb7" class="article-share-link">Share</a>
+      <a data-url="http://3amsg.github.io/2018/06/11/6月9日分享：跨链原子交换/" data-id="cjism6yng0001ie22cxxjnndu" class="article-share-link">Share</a>
       
         <a href="http://3amsg.github.io/2018/06/11/6月9日分享：跨链原子交换/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -155,11 +155,11 @@ Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alic
     
 <nav id="article-nav">
   
-    <a href="/2018/06/17/6月17日分享：瑞波共识机制/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/17/6月17日分享：拜占庭将军问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          6月17日分享：瑞波共识机制
+          6月17日分享：拜占庭将军问题
         
       </div>
     </a>
@@ -206,6 +206,10 @@ Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alic
         
           <li>
             <a href="/2018/06/17/6月17日分享：瑞波共识机制/">6月17日分享：瑞波共识机制</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/17/6月17日分享：拜占庭将军问题/">6月17日分享：拜占庭将军问题</a>
           </li>
         
           <li>
