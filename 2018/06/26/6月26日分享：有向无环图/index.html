@@ -108,21 +108,22 @@
 
 
 
-  <meta name="description" content="Directed Acyclic Graph, DAG 分享者：彦丞 概念 如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   tree一定是有向无环图 有向无环图未必能转化成tree  详细说明理想化的DAG大概是这么个图（没有所谓的主链）  在区块链的应用上，DAG图的每个顶点代表在某一个时间新挖出的区块。一般的线性区块链是DAG的一种">
+  <meta name="description" content="Directed Acyclic Graph, DAG 分享者：彦丞 DAG概念DAG：Directed Acyclic Graph，中文意为「有向无环图」。  如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   注意：  DAG不一定能转化为树，但是树一定是一个DAG DAG可以执行拓扑排序  简单原理 ”教授为了偷懒，让学生互评作业">
 <meta name="keywords" content="blockchain">
 <meta property="og:type" content="article">
-<meta property="og:title" content="6月26日分享：有向无环图">
+<meta property="og:title" content="6月26日分享：有向无环图（的电子货币）">
 <meta property="og:url" content="http://3amsg.github.io/2018/06/26/6月26日分享：有向无环图/index.html">
 <meta property="og:site_name" content="3AM Singapore">
-<meta property="og:description" content="Directed Acyclic Graph, DAG 分享者：彦丞 概念 如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   tree一定是有向无环图 有向无环图未必能转化成tree  详细说明理想化的DAG大概是这么个图（没有所谓的主链）  在区块链的应用上，DAG图的每个顶点代表在某一个时间新挖出的区块。一般的线性区块链是DAG的一种">
+<meta property="og:description" content="Directed Acyclic Graph, DAG 分享者：彦丞 DAG概念DAG：Directed Acyclic Graph，中文意为「有向无环图」。  如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   注意：  DAG不一定能转化为树，但是树一定是一个DAG DAG可以执行拓扑排序  简单原理 ”教授为了偷懒，让学生互评作业">
 <meta property="og:locale" content="Chinese">
+<meta property="og:image" content="http://3amsg.github.io/images/dag3.png">
 <meta property="og:image" content="http://3amsg.github.io/images/dag1.png">
 <meta property="og:image" content="http://3amsg.github.io/images/dag2.gif">
-<meta property="og:updated_time" content="2018-06-25T18:01:55.649Z">
+<meta property="og:updated_time" content="2018-07-01T17:36:59.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6月26日分享：有向无环图">
-<meta name="twitter:description" content="Directed Acyclic Graph, DAG 分享者：彦丞 概念 如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   tree一定是有向无环图 有向无环图未必能转化成tree  详细说明理想化的DAG大概是这么个图（没有所谓的主链）  在区块链的应用上，DAG图的每个顶点代表在某一个时间新挖出的区块。一般的线性区块链是DAG的一种">
-<meta name="twitter:image" content="http://3amsg.github.io/images/dag1.png">
+<meta name="twitter:title" content="6月26日分享：有向无环图（的电子货币）">
+<meta name="twitter:description" content="Directed Acyclic Graph, DAG 分享者：彦丞 DAG概念DAG：Directed Acyclic Graph，中文意为「有向无环图」。  如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。link to WIKI   注意：  DAG不一定能转化为树，但是树一定是一个DAG DAG可以执行拓扑排序  简单原理 ”教授为了偷懒，让学生互评作业">
+<meta name="twitter:image" content="http://3amsg.github.io/images/dag3.png">
 
 
 
@@ -139,7 +140,7 @@
   };
 </script>
 
-  <title>6月26日分享：有向无环图 | 3AM Singapore</title>
+  <title>6月26日分享：有向无环图（的电子货币） | 3AM Singapore</title>
   
 
 
@@ -305,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">6月26日分享：有向无环图
+          <h1 class="post-title" itemprop="name headline">6月26日分享：有向无环图（的电子货币）
               
             
           </h1>
@@ -330,12 +331,24 @@
                 
               
 
-              <time title="Created: 2018-06-26 20:48:41 / Modified: 02:01:55" itemprop="dateCreated datePublished" datetime="2018-06-26T20:48:41+08:00">2018-06-26</time>
+              <time title="Created: 2018-06-26 20:48:41" itemprop="dateCreated datePublished" datetime="2018-06-26T20:48:41+08:00">2018-06-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-07-02 01:36:59" itemprop="dateModified" datetime="2018-07-02T01:36:59+08:00">2018-07-02</time>
               
             
           </span>
@@ -370,46 +383,73 @@
       
         <p>Directed Acyclic Graph, DAG</p>
 <p>分享者：彦丞</p>
-<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><blockquote>
-<p>如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图。<a href="https://zh.wikipedia.org/wiki/%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE" target="_blank" rel="noopener">link to WIKI</a></p>
+<h1 id="DAG概念"><a href="#DAG概念" class="headerlink" title="DAG概念"></a>DAG概念</h1><p>DAG：Directed Acyclic Graph，中文意为「有向无环图」。</p>
+<blockquote>
+<p>如果一个有向图从<strong>任意顶点出发</strong>无法经过若干条边<strong>回到该点</strong>，则这个图是一个有向无环图。<a href="https://zh.wikipedia.org/wiki/%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE" target="_blank" rel="noopener">link to WIKI</a></p>
 </blockquote>
+<p><img src="/images/dag3.png" alt=""></p>
+<p>注意：</p>
 <ol>
-<li>tree一定是有向无环图</li>
-<li>有向无环图未必能转化成tree</li>
+<li>DAG不一定能转化为树，但是树一定是一个DAG</li>
+<li>DAG可以执行拓扑排序</li>
 </ol>
+<h2 id="简单原理"><a href="#简单原理" class="headerlink" title="简单原理"></a>简单原理</h2><blockquote>
+<p>”教授为了偷懒，让学生互评作业</p>
+</blockquote>
+<blockquote>
+<p>规则是每个学生交作业前，要去批2份已经上交的作业，之后自己的作业才可以提交。”</p>
+</blockquote>
+<h2 id="Why-not-blockchain？"><a href="#Why-not-blockchain？" class="headerlink" title="Why not blockchain？"></a>Why not blockchain？</h2><ul>
+<li>效率问题：TPS</li>
+<li>确定性问题：51%算力攻击，量子计算机</li>
+<li>中心化问题：中心化共识</li>
+<li>能耗问题：比特币的挖矿能耗已经与阿根廷全国耗电量持平</li>
+</ul>
 <h2 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h2><p>理想化的DAG大概是这么个图（没有所谓的主链）</p>
 <p><img src="/images/dag1.png" alt=""></p>
-<p>在区块链的应用上，DAG图的每个顶点代表在某一个时间新挖出的区块。一般的线性区块链是DAG的一种特殊情况，也即每个时间段整个系统只能产生一个区块。不同的是，DAG允许不同节点按自己的节奏生成区块，只要每个区块选择一个或多个区块作为自己的子区块。</p>
-<h1 id="IOTA实现"><a href="#IOTA实现" class="headerlink" title="IOTA实现"></a>IOTA实现</h1><p>iota用的tangle结构，就是有个交易确认度的概念<br>不过由于其共识机制还在发展中，网络不够完善<br>所以提出了一个coordinator的机制，目前应该也还是中心化的</p>
-<p>IOTA在防止双花上采取了不同的策略。IOTA将主链的概念普遍化为扭结（tangle），实际上代表厚度任意的主链。在新顶点产生的时候，每个新顶点会选择2个旧顶点作为父顶点，并进行PoW挖矿。IOTA在确定扭结时，按照所有的父顶点关系进行权重计算，给予较多子顶点支持的父顶点更多的权重。</p>
+<p>在区块链的应用上，DAG图的每个顶点代表在某一个时间新挖出的区块。DAG允许不同节点按自己的节奏生成区块。</p>
+<p>每一笔交易就是一个区块，没有容量限制，每个区块有多指向，拓展性强。</p>
+<p>参与者越多，系统越安全，交易也越快。</p>
+<h1 id="DAG实现方法"><a href="#DAG实现方法" class="headerlink" title="DAG实现方法"></a>DAG实现方法</h1><p>DAG系当前的代表项目，最知名的无疑是DAG三架马车—- <strong>IOTA、Byteball、Nano</strong>（原来的Raiblocks）</p>
+<h2 id="IOTA实现"><a href="#IOTA实现" class="headerlink" title="IOTA实现"></a>IOTA实现</h2><p>iota用的tangle结构，就是有个交易确认度的概念<br>不过由于其共识机制还在发展中，网络不够完善<br>所以提出了一个coordinator的机制，目前应该也还是中心化的</p>
+<p>IOTA在防止双花上采取了不同的策略。IOTA将主链的概念普遍化为扭结（tangle），实际上代表厚度任意的主链。</p>
+<p>在新顶点产生的时候，每个新顶点会选择2个旧顶点作为父顶点，并进行PoW挖矿。</p>
+<p>IOTA在确定扭结时，按照所有的父顶点关系进行权重计算，给予较多子顶点支持的父顶点更多的权重。</p>
 <p><img src="/images/dag2.gif" alt=""></p>
-<h1 id="NANO实现"><a href="#NANO实现" class="headerlink" title="NANO实现"></a>NANO实现</h1><p>另外提一下nano，以前叫railblocks 采用点阵结构 nano我记得是一个中国人做的，非常独特和优美</p>
+<h2 id="NANO实现"><a href="#NANO实现" class="headerlink" title="NANO实现"></a>NANO实现</h2><p>另外提一下nano，以前叫railblocks 采用点阵结构 nano我记得是一个中国人做的，非常独特和优美</p>
 <p>Nano采取的DAG架构是给每个账户安排一条单独的链，这些链只有每当有发送或者接受转账时会更新相关交易的信息，这样每条链都只处理跟自己账户有关的交易，大大减少了需要处理的交易总量。</p>
 <p>与比特币不同，由于Nano每个账户有单独的链，对未来的交易可以提前进行PoW挖矿。Nano白皮书对于事先提前挖矿的攻击并没有防御措施。</p>
-<h1 id="Byteball实现"><a href="#Byteball实现" class="headerlink" title="Byteball实现"></a>Byteball实现</h1><p>byteball本身指定了12个见证人节点<br>由见证人来确定主链选择</p>
-<p>Byteball要求从创始块开始确定一条所有参与者公认的主链，而将其它的顶点看作是附属在这条主链上。每一条主链对应着一种不同的主观上的时间顺序，从而对应着不同的双花交易的确认。另外，为了防止攻击者暗中生成影子链并且链嫁接在主链上，Byteball提出见证人（Witness）制度进行主链选择。每当见证人看到一个顶点，就公开宣布看到过这个顶点，而系统选择主链时就依照选择被见证次数最多的顶点的原则。在这种制度下，只需要保证大多数的见证人不会与攻击者窜通作恶，就可以保证主链选择过程的安全性。</p>
-<p>Nano设计成零交易费，所以为了防止垃圾交易，每笔交易入账需要进行一个小算力的PoW挖矿。</p>
-<h2 id="其他实现"><a href="#其他实现" class="headerlink" title="其他实现"></a>其他实现</h2><p>其他的都是已经上市，但是实际上还没推出主网的项目，比如vite，CyberVein，Ambr等等<br>由于在tps上已经没法再吹牛，新的dag项目主要是宣传安全性，提出新的共识算法，支持智能合约等等</p>
-<h2 id="攻击"><a href="#攻击" class="headerlink" title="攻击"></a>攻击</h2><p>DAG允许多重并行交易的特征，导致攻击者可能暗中生成一条影子链，并且时不时地将影子链跟主链进行对接以逃避检测算法。极端情况下，这条影子链有可能代替主链成为全网的共识。</p>
-<h2 id="共识算法"><a href="#共识算法" class="headerlink" title="共识算法"></a>共识算法</h2><p>DAG的共识算法方面实际上基本都是DAGLabs推出的<br>早期的比如Inclusive，Spectre<br>今年出现的Phantom和Avalanche</p>
-<p>spectre是支持pow的<br>另外avalanche应该已经有个项目再发车了，team rocket<br>snowflake to avalanche，白皮书写的非常棒<br>Phantom是通过对交易进行排序，实现dag对智能合约高并发的支持方案<br>avalanche是提出了一套bft+DAG的方案</p>
+<h2 id="Byteball实现"><a href="#Byteball实现" class="headerlink" title="Byteball实现"></a>Byteball实现</h2><p>byteball本身指定了12个见证人节点，由见证人来确定主链选择。</p>
+<p>Byteball要求从创始块开始确定一条所有参与者公认的主链，而将其它的顶点看作是附属在这条主链上。<br>每一条主链对应着一种不同的主观上的时间顺序，从而对应着不同的双花交易的确认。</p>
+<p>另外为了防止影子链嫁接在主链上，Byteball提出见证人（Witness）制度。系统自动选择被见证次数最多的顶点作主链。</p>
+<h2 id="其他实现"><a href="#其他实现" class="headerlink" title="其他实现"></a>其他实现</h2><p>一些已经上市，但是实际上还没推出主网的项目，比如vite，CyberVein，Ambr等等</p>
+<p>由于在tps上已经没法再吹牛，新的dag项目主要是宣传安全性，提出新的共识算法，支持智能合约等等</p>
+<h1 id="技术架构"><a href="#技术架构" class="headerlink" title="技术架构"></a>技术架构</h1><h2 id="不同共识概略"><a href="#不同共识概略" class="headerlink" title="不同共识概略"></a>不同共识概略</h2><p>DAG的共识算法方面实际上基本都是DAGLabs推出的<br>早期的比如Inclusive，Spectre<br>今年出现的Phantom和Avalanche</p>
+<p>Spectre是支持pow的</p>
+<p>另外Avalanche应该已经有个项目再发车了，team rocket</p>
+<p>Snowflake to avalanche，白皮书写的非常棒</p>
+<p>Phantom是通过对交易进行排序，实现DAG对智能合约高并发的支持方案</p>
+<p>Avalanche是提出了一套bft+DAG的方案</p>
+<h2 id="挖矿"><a href="#挖矿" class="headerlink" title="挖矿"></a>挖矿</h2><p><strong>区块链中添加下一个区块需要多方进行竞争</strong>，并获取区块奖励或交易手续费。</p>
+<p>正因如此，<strong>共识和交易生成是分离开的</strong>，并且由网络的一小部分人来完成，通常会设置较高门槛（就像比特币一样），这样会导致进一步的中心化（算力垄断）。</p>
+<p>在DAG系统中，<strong>交易者本身就是矿工</strong>，网络中的每位参与者都能进行交易并且积极参与共识。通过这种方式，验证就能同步进行，网络能够保持完全去中心化，不需要矿工传递信任，也不需要支付交易手续费。</p>
+<p>（笔者按：交易者不参与自己的交易的共识，那么交易者做PoW验证的其实是其他节点的交易。算力超过51%的话，大矿池可以做到侧链权重&gt;主链。<strong>然而DAG比Bitcoin更安全实际原因在于</strong>，由于每层有多个区块，即使矿工发生分叉，后续节点看到分叉矿工的tangle结构，以及the fact that侧链每层只有一个区块，会自动更加信任主链）</p>
+<h2 id="攻击"><a href="#攻击" class="headerlink" title="攻击"></a>攻击</h2><p>DAG允许多重并行交易的特征，导致攻击者可能暗中生成一条<strong>影子链</strong>，并且时不时地将影子链跟主链进行对接以逃避检测算法。</p>
+<p>极端情况下，这条影子链有可能代替主链成为全网的共识。</p>
 <h1 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h1><p>一个是Constellation，已经上线测试，应该是使用的交易序列，来支持智能合约的实现，同时其智能合约用的是scala语言。<br>另外hashgraph还有其他几个用的实际上是offchain的智能合约实现形式，用docker，microservice之类，结合DAG</p>
 <p>Vite比较特别的是采用了分组，分级的DAG结构，有所谓共识组，快照组<br>快照组进行全网的维护和确认，具体的大家可以看vite白皮书</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>所以可以看出来DAG的一个主要尝试方向就是把见证人模式优化成分组分层的结构，通过权重来区别节点以及交易</p>
 <p>总的来说DAG结构目前只适合特定方向的应用场景，自身也有非常多的问题需要解决，共识机制也才刚刚开始完善，广阔天地大有可为</p>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h2><h3 id="IOTA如何防止垃圾交易拥堵网络？"><a href="#IOTA如何防止垃圾交易拥堵网络？" class="headerlink" title="IOTA如何防止垃圾交易拥堵网络？"></a>IOTA如何防止垃圾交易拥堵网络？</h3><p>gossip protocol，降低带宽<br>又比如hashgraph的gossip of gossip，基本上把带宽降到非常低</p>
-<h3 id="那么千万级别TPS的区块链是如何实现的"><a href="#那么千万级别TPS的区块链是如何实现的" class="headerlink" title="那么千万级别TPS的区块链是如何实现的"></a>那么千万级别TPS的区块链是如何实现的</h3><p>比如EOS，一条主链3000 TPS，我来300个侧链，差不多就百万级。</p>
+<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h1><h2 id="IOTA如何防止垃圾交易拥堵网络？"><a href="#IOTA如何防止垃圾交易拥堵网络？" class="headerlink" title="IOTA如何防止垃圾交易拥堵网络？"></a>IOTA如何防止垃圾交易拥堵网络？</h2><p>Gossip protocol，降低带宽</p>
+<p>又比如hashgraph的gossip of gossip，基本上把带宽降到非常低</p>
+<h2 id="那么千万级别TPS的区块链是如何实现的"><a href="#那么千万级别TPS的区块链是如何实现的" class="headerlink" title="那么千万级别TPS的区块链是如何实现的"></a>那么千万级别TPS的区块链是如何实现的</h2><p>比如EOS，一条主链3000 TPS，我来300个侧链，差不多就百万级。</p>
 <p>然后每条链上我还能做multi thread，千万级不在话下</p>
-<h3 id="DAG效率如何优化"><a href="#DAG效率如何优化" class="headerlink" title="DAG效率如何优化"></a>DAG效率如何优化</h3><p>DAG与代数拓扑学中被深入研究的偏序集（Partially Ordered Set或Poset）有紧密联系。事实上，任何一个DAG都唯一对应一个Poset, 而所有的Poset都是DAG，所以它们在本质上是一种事物。</p>
-<p>比如，网络里路由最重要，路由最主要的作用一个是防止环路，一个是找到最短路径<br>有了路由，整个网络才能比较优化的处理更大的数据量，更加稳定</p>
-<p>放环最主要的几个方法就是指定几个主路由器，然后分层分组，每几个路由节点负责处理本层或者本组的数据。同时网络协议为了降低全网的广播带宽，也做了很多优化，比如分边缘节点，核心节点之类<br>跟DAG的概念是非常像的</p>
-<p>像最新出来的几个项目，Celer，其核心构件最有特色的就是cRoute，大家可以去看看</p>
-<h3 id="IOTA和Nano的容错率是多少？"><a href="#IOTA和Nano的容错率是多少？" class="headerlink" title="IOTA和Nano的容错率是多少？"></a>IOTA和Nano的容错率是多少？</h3><p>比如iota，根据交易被确认的次数，来确定交易的确认完成度<br>如果定义为100次，基本上在数学上就是完全可信的了</p>
+<h2 id="IOTA和Nano的容错率是多少？"><a href="#IOTA和Nano的容错率是多少？" class="headerlink" title="IOTA和Nano的容错率是多少？"></a>IOTA和Nano的容错率是多少？</h2><p>比如iota，根据交易被确认的次数，来确定交易的确认完成度<br>如果定义为100次，基本上在数学上就是完全可信的了</p>
 <p>nano本身不够完善，之前都是一个人在做的</p>
 <p>iota就不说了，他的coordinator实际上还是中心化的<br>只适合iot场景（量大，低价值，高吞吐，对时延精度要求不高）</p>
-<h3 id="为什么说IOTA是中心化的？"><a href="#为什么说IOTA是中心化的？" class="headerlink" title="为什么说IOTA是中心化的？"></a>为什么说IOTA是中心化的？</h3><p>由于IOTA是为了规模应用而建立的，因此出于安全原因，我们采用了一种自主的和临时性的共识机制：协调器。每隔两分钟，IOTA基金会创建一笔里程碑（milestone）交易，所有经它确认的交易立即被认为具有100％的确认置信度。使用协调器，Alice的第二笔交易就永远不会得到确认。协调器在IOTA网络早期发展阶段充当了一种保护机制，直到完整的Tangle分布式共识算法开始发挥作用时，IOTA基金会将关闭协调器，让Tangle完全依靠自身来演变和发展。这将在迭代阶段发生，当网络成熟到可以摆脱协调员时，网络本身也会立即变得更加效率。</p>
-<p>从概率上讲，小微交易差不多确认就行啦<br>大额交易，可以要求确认置信度到90%以上</p>
-<p>这个调节器实际上是在共识不稳定时期做一个防止回滚的功能</p>
+<h2 id="为什么说IOTA是中心化的？"><a href="#为什么说IOTA是中心化的？" class="headerlink" title="为什么说IOTA是中心化的？"></a>为什么说IOTA是中心化的？</h2><p>由于IOTA是为了规模应用而建立的，因此出于安全原因，采用了一种临时性的共识机制：协调器。每隔两分钟，IOTA基金会创建一笔里程碑（milestone）交易，所有经它确认的交易立即被认为具有100％的确认置信度。</p>
+<p>使用协调器，Alice的第二笔交易就永远不会得到确认。协调器在IOTA网络早期发展阶段充当了一种保护机制。</p>
+<p>（笔者按：这个调节器实际上是在共识不稳定时期做一个防止回滚的功能）</p>
 
       
     </div>
@@ -559,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#详细说明"><span class="nav-number">1.1.</span> <span class="nav-text">详细说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IOTA实现"><span class="nav-number">2.</span> <span class="nav-text">IOTA实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NANO实现"><span class="nav-number">3.</span> <span class="nav-text">NANO实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Byteball实现"><span class="nav-number">4.</span> <span class="nav-text">Byteball实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#其他实现"><span class="nav-number">4.1.</span> <span class="nav-text">其他实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#攻击"><span class="nav-number">4.2.</span> <span class="nav-text">攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共识算法"><span class="nav-number">4.3.</span> <span class="nav-text">共识算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#智能合约"><span class="nav-number">5.</span> <span class="nav-text">智能合约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">5.2.</span> <span class="nav-text">Q &amp; A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IOTA如何防止垃圾交易拥堵网络？"><span class="nav-number">5.2.1.</span> <span class="nav-text">IOTA如何防止垃圾交易拥堵网络？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那么千万级别TPS的区块链是如何实现的"><span class="nav-number">5.2.2.</span> <span class="nav-text">那么千万级别TPS的区块链是如何实现的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DAG效率如何优化"><span class="nav-number">5.2.3.</span> <span class="nav-text">DAG效率如何优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOTA和Nano的容错率是多少？"><span class="nav-number">5.2.4.</span> <span class="nav-text">IOTA和Nano的容错率是多少？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么说IOTA是中心化的？"><span class="nav-number">5.2.5.</span> <span class="nav-text">为什么说IOTA是中心化的？</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DAG概念"><span class="nav-number">1.</span> <span class="nav-text">DAG概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单原理"><span class="nav-number">1.1.</span> <span class="nav-text">简单原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-not-blockchain？"><span class="nav-number">1.2.</span> <span class="nav-text">Why not blockchain？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细说明"><span class="nav-number">1.3.</span> <span class="nav-text">详细说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DAG实现方法"><span class="nav-number">2.</span> <span class="nav-text">DAG实现方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOTA实现"><span class="nav-number">2.1.</span> <span class="nav-text">IOTA实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NANO实现"><span class="nav-number">2.2.</span> <span class="nav-text">NANO实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Byteball实现"><span class="nav-number">2.3.</span> <span class="nav-text">Byteball实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他实现"><span class="nav-number">2.4.</span> <span class="nav-text">其他实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术架构"><span class="nav-number">3.</span> <span class="nav-text">技术架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同共识概略"><span class="nav-number">3.1.</span> <span class="nav-text">不同共识概略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿"><span class="nav-number">3.2.</span> <span class="nav-text">挖矿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#攻击"><span class="nav-number">3.3.</span> <span class="nav-text">攻击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#智能合约"><span class="nav-number">4.</span> <span class="nav-text">智能合约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">5.</span> <span class="nav-text">Q &amp; A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOTA如何防止垃圾交易拥堵网络？"><span class="nav-number">5.1.</span> <span class="nav-text">IOTA如何防止垃圾交易拥堵网络？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那么千万级别TPS的区块链是如何实现的"><span class="nav-number">5.2.</span> <span class="nav-text">那么千万级别TPS的区块链是如何实现的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOTA和Nano的容错率是多少？"><span class="nav-number">5.3.</span> <span class="nav-text">IOTA和Nano的容错率是多少？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么说IOTA是中心化的？"><span class="nav-number">5.4.</span> <span class="nav-text">为什么说IOTA是中心化的？</span></a></li></ol></li></ol></div>
             
 
           </div>
