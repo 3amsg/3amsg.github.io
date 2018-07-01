@@ -355,6 +355,18 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/11/6月9日分享：跨链原子交换/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/11/6月9日分享：跨链原子交换/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -486,6 +498,35 @@ Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alic
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        
+        
+<% if (config.disqus_shortname){ %>
+<script>
+  var disqus_shortname = '<%= config.disqus_shortname %>';
+  <% if (page.permalink){ %>
+  var disqus_url = '<%= config.url +"/"+ page.path %>';
+  <% } %>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<% } %>
+  
+  
+      </div>
+    </div>
 
   
 
@@ -729,13 +770,34 @@ Bob在以太坊网络里看到了x值，然后从比特币网络中取出了Alic
 
   
 
-
-
-
-
-
+  
+    <script id="dsq-count-scr" src="https://3amsg.disqus.com/count.js" async></script>
+  
 
   
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://3amsg.github.io/2018/06/11/6月9日分享：跨链原子交换/';
+        this.page.identifier = '2018/06/11/6月9日分享：跨链原子交换/';
+        this.page.title = '6月9日分享：跨链原子交换';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://3amsg.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+
 
 
 
