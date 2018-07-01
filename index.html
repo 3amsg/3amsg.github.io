@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-02 01:36:59" itemprop="dateModified" datetime="2018-07-02T01:36:59+08:00">2018-07-02</time>
+                <time title="Modified: 2018-07-02 01:38:29" itemprop="dateModified" datetime="2018-07-02T01:38:29+08:00">2018-07-02</time>
               
             
           </span>
@@ -438,7 +438,7 @@
 <p>（笔者按：交易者不参与自己的交易的共识，那么交易者做PoW验证的其实是其他节点的交易。算力超过51%的话，大矿池可以做到侧链权重&gt;主链。<strong>然而DAG比Bitcoin更安全实际原因在于</strong>，由于每层有多个区块，即使矿工发生分叉，后续节点看到分叉矿工的tangle结构，以及the fact that侧链每层只有一个区块，会自动更加信任主链）</p>
 <h2 id="攻击"><a href="#攻击" class="headerlink" title="攻击"></a>攻击</h2><p>DAG允许多重并行交易的特征，导致攻击者可能暗中生成一条<strong>影子链</strong>，并且时不时地将影子链跟主链进行对接以逃避检测算法。</p>
 <p>极端情况下，这条影子链有可能代替主链成为全网的共识。</p>
-<h1 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h1><p>一个是Constellation，已经上线测试，应该是使用的交易序列，来支持智能合约的实现，同时其智能合约用的是scala语言。<br>另外hashgraph还有其他几个用的实际上是offchain的智能合约实现形式，用docker，microservice之类，结合DAG</p>
+<h2 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h2><p>一个是Constellation，已经上线测试，应该是使用的交易序列，来支持智能合约的实现，同时其智能合约用的是scala语言。<br>另外hashgraph还有其他几个用的实际上是offchain的智能合约实现形式，用docker，microservice之类，结合DAG</p>
 <p>Vite比较特别的是采用了分组，分级的DAG结构，有所谓共识组，快照组<br>快照组进行全网的维护和确认，具体的大家可以看vite白皮书</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>所以可以看出来DAG的一个主要尝试方向就是把见证人模式优化成分组分层的结构，通过权重来区别节点以及交易</p>
 <p>总的来说DAG结构目前只适合特定方向的应用场景，自身也有非常多的问题需要解决，共识机制也才刚刚开始完善，广阔天地大有可为</p>
